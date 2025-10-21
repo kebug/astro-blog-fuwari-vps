@@ -29,3 +29,6 @@ yarn.lock
 # ide
 .idea
 *.iml
+
+# 本地部署复制脚本
+scripts/deploy-local.sh

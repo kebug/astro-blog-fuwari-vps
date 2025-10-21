@@ -7,6 +7,8 @@
     "start": "astro dev",
     "check": "astro check",
     "build": "astro build && pagefind --site dist",
+    "build:local": "cross-env DEPLOY_LOCAL=true pnpm run build && pagefind --site dist",
+    "deploy:local": "bash scripts/deploy-local.sh",
     "preview": "astro preview",
     "astro": "astro",
     "type-check": "tsc --noEmit --isolatedDeclarations",

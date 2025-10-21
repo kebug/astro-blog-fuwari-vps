@@ -24,10 +24,12 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 
+const isLocal = process.env.DEPLOY_LOCAL === "true";
+
 // https://astro.build/config
 export default defineConfig({
 	site: "https://kebug.github.io/",
-	base: "/astro-blog-fuwari-vps",
+	base: isLocal ? "/" : "/astro-blog-fuwari-vps",
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
